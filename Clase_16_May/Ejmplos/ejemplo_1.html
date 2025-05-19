@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">            <!-- Codificación de caracteres -->
+  <title>Menú Interactivo Referenciando con el atributo class</title> <!-- Título de la página -->
+
+  <style>
+    /* Aplica estilo al contenedor de la lista */
+    ul {
+      background-color: #d8aee3;  /* Color de fondo lila */
+      padding: 15px;                /* Espaciado interno */
+      margin: 0;                    /* Quita margen por defecto */
+      list-style: none;             /* Elimina viñetas */
+      display: flex;                /* Alinea los <li> en fila */
+      gap: 20px;                    /* Espacio entre ítems */
+    }
+
+    /* Estilos aplicados a todos los <li> del documento */
+    li {
+      color: white;               /* Color del texto */
+      padding: 10px 20px;           /* Relleno interno del botón */
+      font-family: Georgia, serif;  /* Fuente serif elegante */
+      font-size: 20px;              /* Tamaño de letra */
+      cursor: default;              /* Cursor normal inicialmente */
+      transition: background-color 0.3s, cursor 0.3s; /* Animación suave */
+    }
+
+    /* Efecto al pasar el mouse por cualquier <li> */
+    li:hover {
+      background-color: blue;     /* Fondo azul al pasar el mouse */
+      cursor: pointer;              /* Cambia el cursor a mano */
+      font-weight: bold;            /* Negrita para resaltar */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Lista del menú con elementos <li> sin clases ni IDs -->
+  <ul>
+    <li>Inicio</li>              <!-- Primer botón -->
+    <li>¿Quiénes Somos?</li>     <!-- Segundo botón -->
+    <li>Contacto</li>            <!-- Tercer botón -->
+  </ul>
+
+</body>
+</html>

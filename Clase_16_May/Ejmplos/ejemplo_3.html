@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"> <!-- Define la codificación del documento -->
+  <title>Menú Interactivo Referenciando con el atributo id</title> <!-- Título que aparece en la pestaña del navegador -->
+  <style>
+    /* Estilo del contenedor del menú */
+    #menu-container {
+      background-color: #d8aee3; /* Fondo color lila */
+      padding: 15px; /* Espaciado interno */
+    }
+
+    /* Estilo para la lista del menú */
+    #menu-list {
+      list-style: none; /* Elimina los puntos de la lista */
+      margin: 0;         /* Quita el margen por defecto */
+      padding: 0;        /* Quita el relleno por defecto */
+      display: flex;     /* Muestra los elementos en una sola fila */
+      gap: 20px;         /* Espacio entre los botones */
+    }
+
+    /* Estilo común para cada ítem del menú */
+    .menu-item {
+      color: white;               /* Color de texto blanco */
+      padding: 10px 20px;         /* Espaciado interno del botón */
+      font-family: Georgia, serif;/* Fuente serif */
+      font-size: 20px;            /* Tamaño de fuente */
+      cursor: default;            /* Cursor normal por defecto */
+      transition: background-color 0.3s, cursor 0.3s; /* Transición suave al pasar el mouse */
+    }
+
+    /* Cambios visuales al pasar el cursor por un ítem */
+    .menu-item:hover {
+      background-color: blue; /* Cambia el fondo a azul */
+      cursor: pointer;        /* Cambia el cursor a mano */
+      font-weight: bold;      /* Resalta el texto */
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Contenedor principal del menú -->
+  <nav id="menu-container">
+    <!-- Lista no ordenada que contiene los ítems del menú -->
+    <ul id="menu-list">
+      <!-- Cada ítem usa la clase .menu-item pero se gestiona desde un contenedor con ID -->
+      <li class="menu-item" id="inicio">Inicio</li>           <!-- Primer botón -->
+      <li class="menu-item" id="quienes">¿Quienes Somos?</li> <!-- Segundo botón -->
+      <li class="menu-item" id="contacto">Contacto</li>       <!-- Tercer botón -->
+    </ul>
+  </nav>
+
+</body>
+</html>

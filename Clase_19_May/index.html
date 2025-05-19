@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--Materail Icons (Google)-->
+     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Importar Matalizalize CSS-->
+    <link rel="stylesheet" href="css/materialize.min.css">
+    
+    <title>Materializa</title>
+</head>
+<body>
+    <div class="collection">
+        <a href="#!" class="collection-item"><span class="badge">1</span>Alan</a>
+        <a href="#!" class="collection-item"><span class="new badge">4</span>Alan</a>
+    </div>
+
+    <ul id="dropdown2" class="dropdown-content">
+        <li><a href="#!">One <span class="badge">1</span></a></li>
+        <li><a href="#!">Two <span class="new badge">1</span></a></li>
+        <li><a href="#!">Three</a></li>
+    </ul>
+
+    <a class="btn dropdown-trigger" href="#!" data-target="dropdown2">
+        Dropdown <i class="material-icons right">arrow_drop_down</i>
+    </a>
+
+    <ul class="pagination">
+        <li class="disabled"><a href="#!"> <i class="material-icons">chevron_left</i></a></li>
+        <li class="active"><a href="#!">1</a></li>
+        <li class="waves-effect"><a href="#!">2</a></li>
+        <li class="waves-effect"><a href="#!">3</a></li>
+        <li class="waves-effect"><a href="#!">4</a></li>
+        <li class="waves-effect"><a href="#!">5</a></li>
+        <li class="waves-effect"><a href="#!"><i class="material-icons">chevron_right</i></a></li>
+
+    </ul>
+
+    
+    <!--Importar Materializable JS-->
+    <script src="js/materialize.min.js"></script>
+
+        <!--Inicializar dropdown-->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var elems = document.querySelectorAll('.dropdown-trigger');
+            var instances = M.Dropdown.init(elems);
+        });
+    </script>
+
+</body>
+</html>
