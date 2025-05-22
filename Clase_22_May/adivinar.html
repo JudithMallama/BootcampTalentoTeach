@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivina adivinador</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 30px;
+        }
+        .resultado {
+            margin-top: 15px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Adivian el número</h1>
+    <p>Hemos seleccionado un número alatorio entre 1 y 100, intenta adivinarlo en 10 intentos o menos. Vmaos a decirte si tu número más alto o mas bajo. Si se terminana tut intenetis podrá iniciar nuevamente</p>
+
+    <label for="adivinanza">Adivina el número: </label>
+    <input type="number" id="adivinanza">
+    <button onclick="adivinar()">Adivinar</button>
+
+    <div class="resultado" id="resultado"></div>
+    <dialog class="resultado" id="intentos"></dialog>
+
+    <script>
+    let numeroSecreto = Math.floor(Math.random() * 100) + 1;
+    let intentos = 0;
+    const maxIntentos = 10;
+
+    function adivinar() {
+        const entrada = document.getElementById("adivinanza").value;
+        const resultado = document.getElementById("resultado");
+        const intentosElement = document.getElementById("intentos");
+
+        const numero = parseInt(entrada);
+
+        if (isNaN(numero) || numero < 1 || numero > 100) {
+            resultado.textContent = "Por favor ingrese un número entre 1 y 100.";
+        } else {
+            intentos++;
+            if (numero === numeroSecreto) {
+                resultado.textContent = `¡Felicidades! Adivinaste el número en ${intentos} intentos.`;
+            } else if (intentos >= maxIntentos) {
+                resultado.textContent = `¡Lo siento! Has alcanzado el número máximo de intentos. El número era ${numeroSecreto}.`;
+                reiniciarJuego();
+            } else {
+                if (numero < numeroSecreto) {
+                    resultado.textContent = "Demasiado bajo. Intente de nuevo.";
+                } else {
+                    resultado.textContent = "Demasiado alto. Intente de nuevo.";
+                }
+                intentosElement.textContent = `Intentos usados: ${intentos} de ${maxIntentos}`;
+            }
+
+            document.getElementById('adivinanza').value = '';
+            document.getElementById('adivinanza').focus();
+        }
+    }
+
+    function reiniciarJuego() {
+        numeroSecreto = Math.floor(Math.random() * 100) + 1;
+        intentos = 0;
+        document.getElementById('intentos').textContent = '';
+        document.getElementById('resultado').textContent = '';
+    }
+</script>
+
+</body>
+</html>

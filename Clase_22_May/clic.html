@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!--Declara el tipo de documento como HTML5-->
+<html lang="es">
+<!--Define el idima principal del documento como español-->
+    <head>
+        <title>Este texto es el título del documento</title>
+        <!--Titulo del documento-->
+        <script>
+            //Función que muestra una funcion al ususario
+            function mostraralerta(){
+                alert('hizo clic!');
+            }
+            // Función que asigna un manejador de eventos al primer parrafo
+            function hacerclic(){
+                document.getElementsByTagName('p')[0].onclick=mostraralerta;
+                //Seleccione el primer elemento <p> (indice 0) y le asigna el evento de clic
+            }
+            //cuando la página haya cargado, se ejecuta la función hacerclic
+            window.onload=hacerclic;
+    </script>
+    </head>
+    <body>
+        <div id=”principal”>
+        <p>Hacer Clic</p>
+        <p>No puede hacer Clic</p>
+        </div> 
+    </body>
+</html>
