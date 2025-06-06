@@ -1,0 +1,5 @@
+file = open('C:/Users/nessa/Desktop/TalentoTeach/BootcampTalentoTeach/Clase-6_Jun/lecturadearchivos/Archivo.txt', 'w')
+#contenido =file.read()
+#print(contenido)
+file.write('Este texto se sgrega al final del archivos.\n')
+file.close()

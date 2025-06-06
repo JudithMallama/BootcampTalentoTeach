@@ -81,5 +81,4 @@ def divide():
         else:
             print("El dividendo no puede ser cero, ingresa los valores nuevamente")
                       
-
 menu()
